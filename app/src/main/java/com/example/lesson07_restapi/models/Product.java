@@ -8,30 +8,30 @@ public class Product {
     @SerializedName("id")
     @Expose
     public Integer id;
-    @SerializedName("categories_id")
+    @SerializedName("name")
     @Expose
-    public Integer categoriesId;
-    @SerializedName("p_name")
+    public String name;
+    @SerializedName("slug")
     @Expose
-    public String pName;
-    @SerializedName("p_code")
-    @Expose
-    public String pCode;
-    @SerializedName("p_color")
-    @Expose
-    public String pColor;
-    @SerializedName("description")
-    @Expose
-    public String description;
-    @SerializedName("price")
-    @Expose
-    public Integer price;
-    @SerializedName("quantity")
-    @Expose
-    public Integer quantity;
+    public String slug;
     @SerializedName("image")
     @Expose
     public String image;
+    @SerializedName("price")
+    @Expose
+    public Integer price;
+    @SerializedName("sale_price")
+    @Expose
+    public Integer salePrice;
+    @SerializedName("category_id")
+    @Expose
+    public Integer categoryId;
+    @SerializedName("status")
+    @Expose
+    public Integer status;
+    @SerializedName("content")
+    @Expose
+    public String content;
     @SerializedName("created_at")
     @Expose
     public String createdAt;

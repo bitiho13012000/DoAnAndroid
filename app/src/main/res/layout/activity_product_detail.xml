@@ -28,14 +28,6 @@
             android:text="Tên sản phẩm"
             android:textColor="@color/white"
             android:textSize="23sp" />
-
-        <TextView
-            android:id="@+id/product_detail_price"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="23.000đ"
-            android:textColor="@color/white"
-            android:textSize="19sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -62,14 +54,54 @@
             <TextView
                 android:layout_width="130dp"
                 android:layout_height="match_parent"
-                android:text="Quantity:  "
+                android:text="Slug:  "
                 android:textColor="@color/white"
                 android:textSize="16dp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/product_detail_quantity"
+                android:id="@+id/product_detail_slug"
+                android:textColor="@color/white"
+                android:textSize="16dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="match_parent"
+                android:text="Price:"
+                android:textColor="@color/white"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/product_detail_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="16dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="match_parent"
+                android:text="Sale Price:"
+                android:textColor="@color/white"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/product_detail_sale_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:textColor="@color/white"
                 android:textSize="16dp" />
         </LinearLayout>
@@ -83,59 +115,38 @@
             <TextView
                 android:layout_width="130dp"
                 android:layout_height="match_parent"
-                android:text="Code:  "
+                android:text="CategoryID:  "
                 android:textColor="@color/white"
                 android:textSize="16dp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/product_detail_code"
+                android:id="@+id/product_detail_category_id"
                 android:textColor="@color/white"
                 android:textSize="16dp" />
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:orientation="horizontal">
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginBottom="10dp"-->
+<!--            android:orientation="horizontal">-->
 
-            <TextView
-                android:layout_width="130dp"
-                android:layout_height="match_parent"
-                android:text="Color:  "
-                android:textColor="@color/white"
-                android:textSize="16dp" />
+<!--            <TextView-->
+<!--                android:layout_width="130dp"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:text="Content:"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="16dp" />-->
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/product_detail_color"
-                android:textColor="@color/white"
-                android:textSize="16dp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="130dp"
-                android:layout_height="match_parent"
-                android:text="Danh Mục:"
-                android:textColor="@color/white"
-                android:textSize="16dp" />
-
-            <TextView
-                android:id="@+id/product_detail_category"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:textSize="16dp" />
-        </LinearLayout>
+<!--            <TextView-->
+<!--                android:id="@+id/product_detail_content"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="16dp" />-->
+<!--        </LinearLayout>-->
 
 <!--        <LinearLayout-->
 <!--            android:layout_width="match_parent"-->
@@ -161,7 +172,7 @@
 
 
         <TextView
-            android:id="@+id/product_detail_description"
+            android:id="@+id/product_detail_content"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/white"

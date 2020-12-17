@@ -45,7 +45,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
         NumberFormat formatter = new DecimalFormat("#,###");
 
         Glide.with(context).load(products.get(position).image).placeholder(R.drawable.placeholder).into(holder.image);
-        holder.name.setText(products.get(position).pName + "");
+        holder.name.setText(products.get(position).name + "");
         holder.price.setText(formatter.format(products.get(position).price));
     }
 

@@ -21,12 +21,11 @@ import retrofit2.Response;
 public class ProductDetail extends AppCompatActivity {
     private ImageView image;
     private TextView categoriesId;
-    private TextView pName;
-    private TextView pCode;
-    private TextView pColor;
-    private TextView description;
+    private TextView name;
+    private TextView slug;
     private TextView price;
-    private TextView quantity;
+    private TextView salePrice;
+    private TextView content;
     APIInterface apiInterface;
 
     @Override
@@ -34,14 +33,12 @@ public class ProductDetail extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_product_detail);
         image = findViewById(R.id.ivItemDetailImage);
-        pName = findViewById(R.id.product_detail_name);
-        categoriesId = findViewById(R.id.product_detail_category);
-        pCode = findViewById(R.id.product_detail_code);
-        pColor = findViewById(R.id.product_detail_color);
-        description = findViewById(R.id.product_detail_description);
+        name = findViewById(R.id.product_detail_name);
+        categoriesId = findViewById(R.id.product_detail_category_id);
+        slug = findViewById(R.id.product_detail_slug);
+        salePrice = findViewById(R.id.product_detail_sale_price);
+        content = findViewById(R.id.product_detail_content);
         price = findViewById(R.id.product_detail_price);
-        quantity = findViewById(R.id.product_detail_quantity);
-
         apiInterface = APIClient.getClient().create(APIInterface.class);
         loadProduct(getIntent().getLongExtra("productID", 0));
     }
@@ -63,12 +60,12 @@ public class ProductDetail extends AppCompatActivity {
             public void onResponse(Call<Product> call, Response<Product> response) {
                 if (response.isSuccessful()) {
                     Product product = response.body();
-                    pName.setText(product.pName +"");
-                    pCode.setText(product.pCode+"");
-                    pColor.setText(product.pColor+"");
-                    description.setText(product.description + "");
+                    name.setText(product.name +"");
+                    slug.setText(product.slug+"");
+                    content.setText(product.content+"");
+                    salePrice.setText(product.content + "");
                     price.setText(product.price + "$");
-                    quantity.setText(product.quantity);
+                    categoriesId.setText(product.categoryId);
                 }
             }
 
